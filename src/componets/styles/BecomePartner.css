@@ -1,0 +1,50 @@
+/* Container for the Become a Partner section */
+.become-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light background color for the section */
+    color: #333; /* Dark text color */
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  
+  /* Header */
+  .partner-header {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Paragraph */
+  .partner-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px; /* Adjust the width as needed */
+  }
+  
+  /* Apply Link */
+  .partner-apply {
+    margin-top: 1rem;
+  }
+  
+  .apply-link {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #007bff; /* Border color */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .apply-link:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
+  

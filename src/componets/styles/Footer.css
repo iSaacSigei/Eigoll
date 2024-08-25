@@ -1,0 +1,65 @@
+/* Container for the footer */
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Single column layout for small screens */
+    gap: 1rem;
+  }
+  
+  .footer-column {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-social a {
+    color: #fff; /* White color for icons */
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  .footer-column a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive layout for medium and large screens */
+  @media (min-width: 768px) {
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns layout for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-container {
+      grid-template-columns: repeat(4, 1fr); /* Four columns layout for large screens */
+    }
+  }
+  

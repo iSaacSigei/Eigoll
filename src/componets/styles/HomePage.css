@@ -1,0 +1,89 @@
+/* Container for the entire page */
+.home-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Background image container */
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Ensures image covers the container */
+    background-position: center; /* Centers the image */
+    transform: translateY(100%); /* Start off-screen at the bottom */
+    transition: transform 1.5s ease-out, opacity 1s ease-out;
+    opacity: 0; /* Hide image initially */
+  }
+  
+  /* Slide-in animation from the bottom */
+  .background-image.slide-in {
+    transform: translateY(0); /* Slide into view */
+    opacity: 1; /* Make image visible */
+  }
+  
+  /* Slide-out animation to the bottom */
+  .background-image.slide-out {
+    transform: translateY(100%); /* Slide out of view to the bottom */
+    opacity: 0; /* Hide image */
+  }
+  
+  /* Text container positioned on the left side in the middle */
+  .text-container {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    z-index: 2;
+    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+  
+  /* Fade-in class applied when text should be visible */
+  .text-container.fade-in {
+    opacity: 1;
+    animation: textColorChange 4s ease-in-out infinite; /* Gradient color animation */
+  }
+  
+  /* Fade-out class applied when text should be hidden */
+  .text-container.fade-out {
+    opacity: 0;
+  }
+  
+  /* Paragraphs appear later than the header */
+  .text-container p {
+    opacity: 0;
+    animation: fadeInParagraph 1.5s ease-out forwards;
+    animation-delay: 1s; /* Delay to appear after header */
+  }
+  
+  /* Paragraph fade-in */
+  @keyframes fadeInParagraph {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .text-container {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      left: 5%; /* Adjust position for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-container {
+      font-size: 1rem; /* Further adjust font size for very small screens */
+      left: 2%; /* Further adjust position for very small screens */
+    }
+  }
+  

@@ -1,0 +1,96 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo img {
+    height: 60px; /* Increased logo size */
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .navbar-links a:hover {
+    color: #007bff;
+  }
+  
+  .navbar-mobile-menu {
+    display: none;
+  }
+  
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+  
+  .navbar-mobile-menu button {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .navbar-mobile-menu button:focus {
+    outline: none;
+  }
+  
+  /* Dropdown Menu on Small Screens */
+  .navbar-links.open {
+    display: block;
+    position: absolute;
+    /* text-align: right; */
+    top: 60px;
+    right: 0px;
+    background-color: black;
+    width: 300px; /* Adjusted width for smaller screens */
+    text-align: right;
+    padding: 10px 0;
+  }
+  
+  .navbar-links.open a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .navbar-links.open a:hover {
+    color: #007bff;
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .navbar-mobile-menu {
+      display: block;
+    }
+  }
+  

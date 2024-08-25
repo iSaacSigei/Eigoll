@@ -1,0 +1,54 @@
+/* Container for the About page */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: #fff; /* White text color */
+    text-align: center;
+    background-color: #fff; /* Initial background color */
+    transition: background-color 2s ease, transform 1s ease; /* Combined transitions */
+    transform: scale(0.8); /* Initial zoom-out effect */
+  }
+  
+  /* When the element is in view, apply the new background color and zoom effect */
+  .about-page.in-view {
+    background-color: #333; /* Final background color */
+    transform: scale(1); /* Zoom in */
+  }
+  
+  /* Logo section */
+  .about-logo img {
+    max-width: 200px; /* Adjust logo size */
+    margin-bottom: 2rem;
+  }
+  
+  /* Header */
+  .about-header {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Paragraph */
+  .about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px; /* Adjust the width as needed */
+  }
+  
+  /* Learn More link */
+  .about-learn-more a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .about-learn-more a:hover {
+    text-decoration: underline;
+  }
+  
