@@ -63,18 +63,17 @@
     display: block;
     position: absolute;
     /* text-align: right; */
+    right: 0;
     top: 60px;
-    right: 0px;
     background-color: black;
     width: 300px; /* Adjusted width for smaller screens */
-    text-align: right;
+    text-align: left;
     padding: 10px 0;
   }
   
   .navbar-links.open a {
     display: block;
     padding: 10px 20px;
-    border-bottom: 1px solid #333;
     text-decoration: none; /* Remove underline */
   }
   

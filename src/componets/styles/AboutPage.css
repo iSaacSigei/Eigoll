@@ -1,0 +1,80 @@
+.about-page {
+    width: 100%;
+    padding: 20px;
+
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  
+  .column {
+    width: 45%;
+  }
+  
+  .image-column img {
+    width: 100%; /* Ensure the image fills the column width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 700px; /* Adjust maximum width as needed */
+    max-height: 450px; /* Adjust maximum height as needed */
+    object-fit: cover; /* Cover the image container while maintaining aspect ratio */
+    border: 1px solid #333;
+  }
+  
+  .description-column {
+    transition: transform 1s ease;
+    color: #333;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  
+  .left-image .image-column,
+  .right-image .description-column {
+    transform: translateX(-100%);
+  }
+  
+  .left-image .description-column,
+  .right-image .image-column {
+    transform: translateX(100%);
+  }
+  
+  /* Animation for scrolling */
+  .row.in-view .image-column,
+  .row.in-view .description-column {
+    transform: translateX(0);
+  }
+  
+  .row.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .column {
+      width: 100%;
+    }
+  
+    .image-column img {
+      max-width: 100%; /* Ensure image scales with the column on small screens */
+      max-height: 200px; /* Adjust maximum height for smaller screens */
+    }
+  
+    .image-column {
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Nav Links Section */}
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
           <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link to="/tenders" onClick={() => setIsOpen(false)}>Tenders</Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>

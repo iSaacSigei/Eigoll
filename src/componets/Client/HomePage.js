@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/HomePage.css';
-import BackgroundImage1 from '../images/tender.png';
+import BackgroundImage1 from '../images/constructions.avif';
 import BackgroundImage2 from '../images/supplies.webp';
-import BackgroundImage3 from '../images/road.jpeg';
+import BackgroundImage3 from '../images/roads.jpg';
 import About from './About';
 import OurPartners from './OurPartners';
 import BecomePartner from './BecomePartner';
+
 const messages = [
   {
     backgroundImage: BackgroundImage1,
@@ -54,24 +55,32 @@ const HomePage = () => {
 
   return (
     <>
-    <div className="home-page">
-      {/* Current Background Image */}
-      {currentImage && (
-        <div
-          className={`background-image ${transitioning ? 'slide-out' : 'slide-in'}`}
-          style={{ backgroundImage: `url(${currentImage})` }}
-        ></div>
-      )}
+      <div className="home-page">
+        {/* Current Background Image */}
+        {currentImage && (
+          <div
+            className={`background-image ${transitioning ? 'slide-out' : 'slide-in'}`}
+            style={{ backgroundImage: `url(${currentImage})` }}
+          ></div>
+        )}
 
-      {/* Text Container */}
-      <div className={`text-container ${showText ? 'fade-in' : 'fade-out'}`}>
-        <h1>{messages[currentIndex]?.heading}</h1>
-        <p>{messages[currentIndex]?.text}</p>
+        {/* Text Container */}
+        <div className={`text-container ${showText ? 'fade-in' : 'fade-out'}`}>
+          <h1>{messages[currentIndex]?.heading}</h1>
+          <p>{messages[currentIndex]?.text}</p>
+        </div>
+
+        {/* Additional Text Container for Small Screens */}
+        <div className="small-screen-text">
+          <p>
+            Interested suppliers are invited to apply for prequalification, indicating the category of the goods,
+            works, and services they wish to supply/provide.
+          </p>
+        </div>
       </div>
-    </div>
-    <About/>
-    <OurPartners/>
-    <BecomePartner/>
+      <About />
+      <OurPartners />
+      <BecomePartner />
     </>
   );
 };
