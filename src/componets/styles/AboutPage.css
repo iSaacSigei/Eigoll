@@ -26,14 +26,16 @@
     max-width: 700px; /* Adjust maximum width as needed */
     max-height: 450px; /* Adjust maximum height as needed */
     object-fit: cover; /* Cover the image container while maintaining aspect ratio */
-    border: 1px solid #333;
+    border: 2px solid  #E4C664;;
   }
   
   .description-column {
     transition: transform 1s ease;
     color: #333;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-align: left;
+    margin: 10px;
+    padding: 20px;
   }
   
   .left-image .image-column,

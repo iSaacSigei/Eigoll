@@ -26,8 +26,8 @@ const OurPartners = () => {
       <motion.section
         ref={introRef}
         className="introduction"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: introInView ? 1 : 0, scale: introInView ? 1 : 0.9 }}
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: introInView ? 1 : 0, scale: introInView ? 1 : 1 }}
         transition={{ duration: 0.6 }}
       >
         <h1>Our Partners</h1>

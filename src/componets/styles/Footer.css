@@ -22,7 +22,11 @@
   
   .footer-column h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .footer-column p {
