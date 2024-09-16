@@ -7,9 +7,11 @@ import AboutPage from './componets/Client/AboutPage';
 import ContactPage from './componets/Client/ContactPage';
 import Footer from './componets/Client/Footer';
 import Tenders from './componets/Client/Tenders';
+import { HelmetProvider } from 'react-helmet-async';
 const App = () => {
   return (
     <>
+      <HelmetProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,6 +22,7 @@ const App = () => {
 
       </Routes>
       <Footer/>
+      </HelmetProvider>
     </>
   );
 };

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async'; // For SEO meta tags
-import '../components/styles/Tenders.css';
+import '../styles/Tenders.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Footer from './footer/Footer';
+// import Footer from './Footer';
 
 // Import the PDF file
-import tenderPDF from '../images/tender.pdf';
+// import tenderPDF from '../images/tender.pdf';
 
 const Tenders = () => {
   const [tenders, setTenders] = useState([]);
@@ -110,9 +110,9 @@ const Tenders = () => {
 
         {/* CTA Buttons */}
         <div className="tenders-buttons">
-          <a href={tenderPDF} target="_blank" rel="noopener noreferrer">
+          {/* <a href="" target="_blank" rel="noopener noreferrer">
             <button className="apply-button">APPLY HERE</button>
-          </a>
+          </a> */}
           <button className="tier-button">TENDER PRE-QUALIFICATION TIER 1 - GENERAL SUPPLIERS</button>
           <button className="tier-button">TENDER PRE-QUALIFICATION TIER 2 - AGRIBUSINESS SMEs</button>
         </div>
@@ -149,7 +149,6 @@ const Tenders = () => {
 
       </div>
 
-      <Footer />
     </>
   );
 };
