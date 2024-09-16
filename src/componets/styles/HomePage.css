@@ -1,8 +1,6 @@
 .home-page {
-  width: 100% !important;
+  width: 100vw;
   height: 100vh;
-  margin: auto;
-  overflow: hidden;
   background-color: #333 !important;
 }
 
