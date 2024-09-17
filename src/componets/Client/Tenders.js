@@ -95,16 +95,17 @@ const Tenders = () => {
           </p>
           <p className="address">
             Finance Director <br />
-            {companyName} <br />
-            P.O BOX 43903- 00100 Nairobi, Kenya.
+            {companyName} Industries Ltd
+            <br />
+            P.O BOX 43801- 00500 Nairobi, Kenya.
           </p>
           <p>
             Any queries regarding pre-qualification must be sent in writing to{' '}
-            <a href="mailto:procurement@eigoll.com">procurement@eigoll.com</a>.
+            <a href="mailto:procurement@eigoll.co.ke">procurement@eigoll.co.ke</a>.
           </p>
           <p>
             Completed pre-qualification documents should be submitted electronically as PDF documents clearly indicating the PREQ NO. and DESCRIPTION of the item being applied for, through email{' '}
-            <a href="mailto:tenders@eigoll.com">tenders@eigoll.com</a> not later than 5:00pm, 30th August 2024.
+            <a href="mailto:tenders@eigoll.co.ke">tenders@eigoll.co.ke</a> not later than 5:00pm, 30th August 2024.
           </p>
         </div>
 
