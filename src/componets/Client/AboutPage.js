@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/AboutPage.css';
 import Image1 from '../images/about1.jpg';
 import Image2 from '../images/about2.webp';
@@ -36,21 +37,35 @@ const aboutSections = [
 const AboutPage = () => {
   return (
     <>
-    <div className="about-page">
+      <Helmet>
+        <title>About Us - Eigoll Enterprises</title>
+        <meta name="description" content="Learn more about Eigoll Enterprises, a leader in prequalification and registration services. Discover our mission, vision, and why you should choose us." />
+        <meta property="og:title" content="About Us - Eigoll Enterprises" />
+        <meta property="og:description" content="Learn more about Eigoll Enterprises, a leader in prequalification and registration services. Discover our mission, vision, and why you should choose us." />
+        <meta property="og:image" content={Image1} />
+        <meta property="og:url" content="https://eigoll.co.ke/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Eigoll" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us - Eigoll Enterprises" />
+        <meta name="twitter:description" content="Learn more about Eigoll Enterprises, a leader in prequalification and registration services. Discover our mission, vision, and why you should choose us." />
+        <meta name="twitter:image" content={Image1} />
+      </Helmet>
 
-      <h1 className="about-page__header">About Us</h1>
-      <div className="about-page__sections">
-        {aboutSections.map((section, index) => (
-          <AboutSection
-            key={index}
-            image={section.image}
-            title={section.title}
-            description={section.description}
-            isEven={index % 2 === 0}
-          />
-        ))}
+      <div className="about-page">
+        <h1 className="about-page__header">About Us</h1>
+        <div className="about-page__sections">
+          {aboutSections.map((section, index) => (
+            <AboutSection
+              key={index}
+              image={section.image}
+              title={section.title}
+              description={section.description}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
