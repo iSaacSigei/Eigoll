@@ -36,7 +36,6 @@ const aboutSections = [
 const AboutPage = () => {
   return (
     <>
-    <div className="navbar-placeholder"></div> {/* Temporary placeholder */}
     <div className="about-page">
 
       <h1 className="about-page__header">About Us</h1>
