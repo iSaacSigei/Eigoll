@@ -1,95 +1,111 @@
+/* General Page Styles */
 .home-page {
-  width: 100vw;
-  height: 100vh;
-  background-color: #333 !important;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-.background-image {
+/* Carousel Slide Styles */
+.carousel-slide {
+  height: 100vh; /* Full screen height */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-background {
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 2s ease-in-out;
-}
-
-.slide-in {
-  transform: translateY(0%);
-}
-
-.slide-out {
-  transform: translateY(-100%);
 }
 
 .text-container {
   position: absolute;
-  font-size: 1.4rem;
-  top: 70px; /* Adjust this value to fine-tune the vertical position */
-  left: 50%; /* Center the container horizontally */
-  transform: translateX(-50%); /* Center the container */
-  width: 90%; /* Set width to 90% of the screen */
-  background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-align: left;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  bottom: 15%; /* Move text container towards the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
 }
 
-.fade-in {
-  opacity: 1;
+.text-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.fade-out {
-  opacity: 0;
+.text-container p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Additional Text Container for Small Screens */
+/* Small Screen Text */
 .small-screen-text {
-  display: none;
+  padding: 2rem;
   font-size: 1.2rem;
-  margin-top: 200px;
-  padding: 20px;
-  background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  width: 90%; /* Set width to 90% of the screen */
-  margin: 0 auto; /* Center the container */
+  color: #333;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-
-  .text-container {
-    font-size: 1.2rem;
-    top: 80px;
-    width: 90%; /* Ensure width is 90% of the screen */
+/* Responsive adjustments for medium and small screens */
+@media screen and (max-width: 992px) {
+  /* Medium screens (tablets, etc.) */
+  .carousel-slide {
+    height: 70vh; /* Reduce height */
   }
 
-  .small-screen-text {
-    font-size: 1rem;
-    padding: 10px;
-    width: 90%; /* Ensure width is 90% of the screen */
-    margin: 0 auto; /* Center the container */
+  .text-container h1 {
+    font-size: 2.5rem; /* Reduce font size */
   }
-}
 
-@media (max-width: 480px) {
-  .background-image {
-    display: none; /* Hide the background image on very small screens */
+  .text-container p {
+    font-size: 1.3rem;
   }
 
   .text-container {
+    bottom: 10%; /* Adjust text position near the bottom */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Small screens (phones, small tablets, etc.) */
+  .carousel-slide {
+    height: 50vh; /* Further reduce height */
+  }
+
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
     font-size: 1.1rem;
-    margin-top: 10%;
-    width: 90%; /* Ensure width is 90% of the screen */
-    left: 50%;
-    transform: translateX(-50%);
   }
 
-  .small-screen-text {
-    margin-top: 80%;
-    display: block; /* Show the additional text container on very small screens */
+  .text-container {
+    bottom: 8%; /* Adjust text position near the bottom */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Extra small screens (phones) */
+  .carousel-slide {
+    height: 40vh; /* Further reduce height */
+  }
+
+  .text-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
+
+  .text-container {
+    bottom: 5%; /* Move text closer to the bottom */
   }
 }

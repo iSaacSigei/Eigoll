@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 // import Footer from './Footer';
 
 // Import the PDF file
-// import tenderPDF from '../images/tender.pdf';
+import TenderPdf from '../pdfs/Tender Document Updated.pdf';
 
 const Tenders = () => {
   const [tenders, setTenders] = useState([]);
@@ -111,11 +111,9 @@ const Tenders = () => {
 
         {/* CTA Buttons */}
         <div className="tenders-buttons">
-          {/* <a href="" target="_blank" rel="noopener noreferrer">
+        <a href={TenderPdf} target="_blank" rel="noopener noreferrer">
             <button className="apply-button">APPLY HERE</button>
-          </a> */}
-          <button className="tier-button">TENDER PRE-QUALIFICATION TIER 1 - GENERAL SUPPLIERS</button>
-          <button className="tier-button">TENDER PRE-QUALIFICATION TIER 2 - AGRIBUSINESS SMEs</button>
+          </a>
         </div>
 
         {Object.keys(groupedTenders).map((category, index) => (

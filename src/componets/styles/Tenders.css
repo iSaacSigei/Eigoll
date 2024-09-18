@@ -8,10 +8,7 @@
     color: #333;
     margin-top: 5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+ 
 
 }
 
@@ -23,10 +20,7 @@
     font-size: 1.3rem;
     color: #333;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+
 }
 .apply-button, .tier-button {
     background-color: #007bff;
@@ -51,10 +45,7 @@
 .tenders-table h2 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+
 }
 
 table {
@@ -76,10 +67,6 @@ th, td {
 th {
     background-color: #f2f2f2;
     color: #333;
-    background: linear-gradient(to right, #E4C664 0%, #B18325 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 tr:nth-child(even) {
