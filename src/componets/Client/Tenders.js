@@ -85,7 +85,7 @@ const Tenders = () => {
         <div className="tenders-intro">
           <h1>{companyName} - Prequalification of Suppliers 2024-2027</h1>
           <p>
-            {companyName} invites applications for registration of suppliers, service providers, and contractors for the financial year 2024 – 2027.
+            {companyName} on behalf of our Partner Womall, invites applications for registration of suppliers, service providers, and contractors for the financial year 2024 – 2027.
           </p>
           <p>
             Interested suppliers are invited to apply for prequalification, indicating the category of the goods, works, and services they wish to supply/provide.
