@@ -64,7 +64,7 @@ const Tenders = () => {
         <title>{companyName} - Tenders and Supplier Prequalification 2024-2027</title>
         <meta
           name="description"
-          content={`${companyName} invites applications for registration of suppliers and contractors for the financial year 2024-2027. Explore prequalification categories and apply now.`}
+          content={`${companyName} on behalf of our Partner Womall, invites applications for registration of suppliers and contractors for the financial year 2024-2027. Explore prequalification categories and apply now.`}
         />
         <meta
           name="keywords"
