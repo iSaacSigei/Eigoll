@@ -53,10 +53,10 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             Eigoll Enterprises<br />
-            1234 Business Rd.<br />
-            Suite 100<br />
-            City, State, 12345<br />
-            Email: <a href="mailto:info@eigoll.com">info@eigoll.com</a>
+            View Park Towers, Utali Lane.<br />
+            Room SN8<br />
+            P.O BOX 10062-00400 Nairobi, Kenya<br />
+            Email: <a href="mailto:info@eigoll.co.ke">info@eigoll.co.ke</a>
           </p>
         </div>
       </div>

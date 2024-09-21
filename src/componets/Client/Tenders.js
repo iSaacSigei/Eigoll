@@ -97,7 +97,7 @@ const Tenders = () => {
             Finance Director <br />
             {companyName} Industries Ltd
             <br />
-            P.O BOX 43801- 00500 Nairobi, Kenya.
+            P.O BOX 10062-00400 Nairobi, Kenya.
           </p>
           <p>
             Any queries regarding pre-qualification must be sent in writing to{' '}

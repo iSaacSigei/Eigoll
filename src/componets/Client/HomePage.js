@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/HomePage.css';
-import BackgroundImage1 from '../images/constructions.avif';
+import BackgroundImage1 from '../images/1-1.jpg';
 import BackgroundImage2 from '../images/supplies.webp';
 import BackgroundImage3 from '../images/roads.jpg';
 import About from './About';

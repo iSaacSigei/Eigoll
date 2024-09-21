@@ -90,7 +90,7 @@ const ContactPage = () => {
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Find us here</h3>
               <p className="contact-paragraph">Eigoll Enterprises LTD</p>
-              <p className="contact-paragraph">Kasarani Rd, P.O Box 00791 – 00100, Nairobi</p>
+              <p className="contact-paragraph">P.O BOX 10062-00400 Nairobi, Kenyai</p>
             </div>
           </div>
 
