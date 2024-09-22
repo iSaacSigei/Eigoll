@@ -78,8 +78,8 @@ const ContactPage = () => {
             <h2 className="contact-details-title">Our Contacts</h2>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Call us</h3>
-              <p className="contact-paragraph">+254 20 8642000</p>
-              <p className="contact-paragraph">+254 722 204 424</p>
+              <p className="contact-paragraph">+254 755887472</p>
+              <p className="contact-paragraph">+254 722255759</p>
             </div>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Email us</h3>
@@ -90,7 +90,7 @@ const ContactPage = () => {
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Find us here</h3>
               <p className="contact-paragraph">Eigoll Enterprises LTD</p>
-              <p className="contact-paragraph">P.O BOX 10062-00400 Nairobi, Kenyai</p>
+              <p className="contact-paragraph">P.O BOX 10062-00400 Nairobi, Kenya</p>
             </div>
           </div>
 

@@ -83,19 +83,19 @@ const Tenders = () => {
       <div className="tenders-page" data-aos="fade-up">
         {/* Header */}
         <div className="tenders-intro">
-          <h1>{companyName} - Prequalification of Suppliers 2024-2027</h1>
+          <h1>Eigoll - Prequalification of Suppliers 2024-2027</h1>
           <p>
-            {companyName} on behalf of our Partner Womall, invites applications for registration of suppliers, service providers, and contractors for the financial year 2024 – 2027.
+          Eigoll, on behalf of WoMall LTD, invites applications for registration of suppliers, service providers, and contractors for the financial year 2024 – 2027.
           </p>
           <p>
-            Interested suppliers are invited to apply for prequalification, indicating the category of the goods, works, and services they wish to supply/provide.
+            Interested suppliers are invited to apply for pre-qualification, indicating the category of the goods, works, and services they wish to supply/provide.
           </p>
           <p>
             The completed pre-qualification documents are to be addressed to:
           </p>
           <p className="address">
             Finance Director <br />
-            {companyName} Industries Ltd
+            Eigoll Enterprise Ltd
             <br />
             P.O BOX 10062-00400 Nairobi, Kenya.
           </p>
@@ -105,7 +105,7 @@ const Tenders = () => {
           </p>
           <p>
             Completed pre-qualification documents should be submitted electronically as PDF documents clearly indicating the PREQ NO. and DESCRIPTION of the item being applied for, through email{' '}
-            <a href="mailto:tenders@eigoll.co.ke">tenders@eigoll.co.ke</a> not later than 5:00pm, 30th August 2024.
+            <a href="mailto:tenders@eigoll.co.ke">tenders@eigoll.co.ke</a> not later than 5:00pm, 18th October 2024.
           </p>
         </div>
 
