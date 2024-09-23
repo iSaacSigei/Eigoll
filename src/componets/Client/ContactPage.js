@@ -113,6 +113,7 @@ const ContactPage = () => {
           pauseOnFocusLoss
           draggable
           pauseOnHover
+          style={{ marginTop: '130px' }}  // Add marginTop to ensure visibility
         />
 
         <h1 className="contact-title">Inquiries</h1>
