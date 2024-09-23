@@ -10,7 +10,7 @@ const BecomePartner = () => {
 
       {/* Paragraph */}
       <p className="partner-paragraph">
-        At Eigoll Enterprises, we are committed to bridging the gap between contractors and suppliers. If you are a contractor looking to connect with reliable suppliers or a supplier interested in expanding your reach, we would love to hear from you. Please reach out to us through the email <a href="mailto:info@eigoll.com">info@eigoll.com</a> or fill out the contact form on our contact page. We will get back to you within two working days to explore potential partnership opportunities.
+        At Eigoll Enterprises, we are committed to bridging the gap between contractors and suppliers. If you are a contractor looking to connect with reliable suppliers or a supplier interested in expanding your reach, we would love to hear from you. Please reach out to us through the email <a href="mailto:info@eigoll.co.ke">info@eigoll.co.ke</a> or fill out the contact form on our contact page. We will get back to you within two working days to explore potential partnership opportunities.
       </p>
 
       {/* Apply Link */}
