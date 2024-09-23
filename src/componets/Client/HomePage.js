@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/HomePage.css';
@@ -9,6 +9,14 @@ import About from './About';
 import OurPartners from './OurPartners';
 import BecomePartner from './BecomePartner';
 import OurServices from './OurServices';
+
+// Preload the images for smoother transitions
+const preloadImages = (images) => {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
 
 const messages = [
   {
@@ -29,6 +37,12 @@ const messages = [
 ];
 
 const HomePage = () => {
+  useEffect(() => {
+    // Preload images on component mount
+    const imageUrls = messages.map((message) => message.backgroundImage);
+    preloadImages(imageUrls);
+  }, []);
+
   return (
     <>
       <div className="home-page">
@@ -38,8 +52,8 @@ const HomePage = () => {
           showStatus={false}
           autoPlay
           infiniteLoop
-          interval={6000}
-          transitionTime={1000}
+          interval={4000}
+          transitionTime={1500}
           emulateTouch
           stopOnHover
         >

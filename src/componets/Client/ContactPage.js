@@ -79,7 +79,7 @@ const ContactPage = () => {
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Call us</h3>
               <p className="contact-paragraph">+254 755887472</p>
-              <p className="contact-paragraph">+254 722255759</p>
+              {/* <p className="contact-paragraph">+254 722255759</p> */}
             </div>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Email us</h3>
