@@ -127,7 +127,7 @@ const ContactPage = () => {
             <h2 className="contact-details-title">Our Contacts</h2>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Call us</h3>
-              <p className="contact-paragraph">+254 755887472</p>
+              <p className="contact-paragraph">+254 734 462 900</p>
             </div>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Email us</h3>
