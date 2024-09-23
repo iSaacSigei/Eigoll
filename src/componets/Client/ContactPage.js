@@ -1,17 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/ContactPage.css';
-import Image1 from '../images/about1.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Image1 from '../images/about1.jpg'; // Replace with your correct image path
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     number: '',
     email: '',
-    message: '',
+    message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track form submission state
+
+  // Initialize AOS for animations
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
+  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,32 +35,54 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  // Handle form submission
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Set submitting state to true
 
-    const response = await fetch('https://mysite-jr5y.onrender.com/contact_messages', {
+    fetch('https://mysite-jr5y.onrender.com/contact_messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      toast.success('Your message has been sent successfully!', {
-        position: toast.POSITION.TOP_CENTER,
+      body: JSON.stringify({ contact_message: formData }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Failed to send message');
+        }
+      })
+      .then((data) => {
+        if (data.message) {
+          toast.success('Message sent successfully!', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+          });
+          setFormData({
+            name: '',
+            number: '',
+            email: '',
+            message: ''
+          });
+        } else {
+          toast.error('Failed to send message. Please try again.', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        toast.error('An error occurred. Please try again later.', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 5000,
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false); // Reset submitting state
       });
-      setFormData({
-        name: '',
-        number: '',
-        email: '',
-        message: '',
-      });
-    } else {
-      toast.error('There was an error sending your message. Please try again.', {
-        position: toast.POSITION.TOP_CENTER,
-      });
-    }
   };
 
   return (
@@ -65,8 +102,19 @@ const ContactPage = () => {
         <meta name="twitter:image" content="https://example.com/your-image.jpg" /> {/* Replace with your image URL */}
       </Helmet>
 
-      <div className="contact-wrapper">
-        <ToastContainer />
+      <div className="contact-wrapper" data-aos="fade-up">
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+
         <h1 className="contact-title">Inquiries</h1>
         <p className="contact-description">
           If you still can't find what you're looking for, then you've come to the right place. Contact our team by filling out this simple form, or through our alternative contact details.
@@ -79,7 +127,6 @@ const ContactPage = () => {
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Call us</h3>
               <p className="contact-paragraph">+254 755887472</p>
-              {/* <p className="contact-paragraph">+254 722255759</p> */}
             </div>
             <div className="contact-section-wrapper">
               <h3 className="contact-heading">Email us</h3>
@@ -145,7 +192,9 @@ const ContactPage = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="submit-button">Submit</button>
+              <button type="submit" className="submit-button" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </button>
             </form>
           </div>
         </div>
